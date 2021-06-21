@@ -1,37 +1,43 @@
-## Welcome to GitHub Pages
+## Welcome to be More Confident Programmer
 
-You can use the [editor on GitHub](https://github.com/KMosc/Learn-Patterns-of-Enterprise-Application-Architecture/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+Writing down all nessesary informations to self-improve.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+21.06.2021
+### Domain Logic Patterns
 
-### Markdown
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  ## Transaction Script (110)
 
-```markdown
-Syntax highlighted code block
+  ```markdown
+  Most bussiness applications as a series of transactions.
 
-# Header 1
-## Header 2
-### Header 3
+  Questions:
+  *What does view of transaction include?
 
-- Bulleted
-- List
+  Information organized in a particular way
+  Interaction between client system and server
+  -contains certain ammount of logic;
+  -as simple as displaying information in the database;
+  -it may involve many steps validations and calculations;
 
-1. Numbered
-2. List
+  *What does transaction do?
+  -Transaction will make change to information.
+    Transaction script:
+    - all logic as single procedure;
+    -calls directly to databse through thin database wrapper;
+    Each Transaction will have its own transaction script:
+    - common subtasks can be broken into subprocedures;
 
-**Bold** and _Italic_ and `Code` text
+  ```
 
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/KMosc/Learn-Patterns-of-Enterprise-Application-Architecture/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+  ## Domain Model
+  ```markdown
+  -business logic can be very complex. 
+    -rules and logic describe many different cases and behaviors.
+      -objects were designed to work with this complexity
+     -object represents meaningful individual
+        - DM creates web of interconnected objects
+            - large as corporation
+            -small as single line on an order form
+  ```
+  ![image](https://user-images.githubusercontent.com/84378754/122745139-f99af780-d288-11eb-85b8-76054010fc50.png)
